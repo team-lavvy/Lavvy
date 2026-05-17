@@ -17,24 +17,29 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - run: node -e "require('./index.js'); console.log('All modules loaded successfully')"
-      - run: node -e "
-          const { Lavvy, Node, Player, Queue, Filters } = require('./index.js');
-          const assert = require('node:assert');
 
-          const q = new Queue();
-          q.add({ encoded: 'a', info: { length: 1000 } });
-          q.add({ encoded: 'b', info: { length: 2000 } });
-          assert.strictEqual(q.size, 2);
-          assert.strictEqual(q.duration, 3000);
+      - name: Module load check
+        run: node -e "require('./index.js'); console.log('All modules loaded successfully')"
 
-          q.setLoop('queue');
-          const first = q.next();
-          assert.strictEqual(first.encoded, 'a');
-          assert.strictEqual(q.size, 1);
+      - name: Unit tests
+        run: |
+          node -e "
+            const { Lavvy, Node, Player, Queue, Filters } = require('./index.js');
+            const assert = require('node:assert');
 
-          q.clear();
-          assert.strictEqual(q.size, 0);
+            const q = new Queue();
+            q.add({ encoded: 'a', info: { length: 1000 } });
+            q.add({ encoded: 'b', info: { length: 2000 } });
+            assert.strictEqual(q.size, 2);
+            assert.strictEqual(q.duration, 3000);
 
-          console.log('All tests passed');
+            q.setLoop('queue');
+            const first = q.next();
+            assert.strictEqual(first.encoded, 'a');
+            assert.strictEqual(q.size, 1);
+
+            q.clear();
+            assert.strictEqual(q.size, 0);
+
+            console.log('All tests passed');
           "
