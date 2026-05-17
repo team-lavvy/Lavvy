@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".github/assets/banner.png" alt="Lavvy Banner" width="100%" />
+  <img src=".github/assets/banner.png" alt="Lavvy Banner" width="600" />
 </p>
 
 <h1 align="center">Lavvy</h1>
@@ -18,13 +18,13 @@
 
 ## Features
 
-- 🎵 **Full Lavalink v4 support** — WebSocket + REST, session resume
-- ⚡ **Multi-node** — auto failover & least-load balancing
-- 🎛️ **Audio filters** — bassboost, nightcore, vaporwave, tremolo, karaoke, rotation, distortion
-- 📋 **Built-in queue** — add, remove, shuffle, clear, loop (track & queue)
-- 🔌 **Plugin system** — extend with `lavvy.use(plugin)`
-- 🪶 **Zero dependencies** — only Node.js built-ins
-- 📦 **Tiny footprint** — clean, readable, minimal files
+- **Full Lavalink v4 support** — WebSocket + REST, session resume
+- **Multi-node** — auto failover & least-load balancing
+- **Audio filters** — bassboost, nightcore, vaporwave, tremolo, karaoke, rotation, distortion
+- **Built-in queue** — add, remove, shuffle, clear, loop (track & queue)
+- **Plugin system** — extend with `lavvy.use(plugin)`
+- **Zero dependencies** — only Node.js built-ins
+- **Tiny footprint** — clean, readable, minimal files
 
 ## Install
 
@@ -239,5 +239,5 @@ index.js           # Package entry point
 <p align="center">
   <img src=".github/assets/logo.png" alt="Lavvy Logo" width="80" />
   <br/>
-  <sub>Built with 💜 by <a href="https://github.com/team-lavvy">team-lavvy</a></sub>
+  <sub>Built by <a href="https://github.com/team-lavvy">team-lavvy</a></sub>
 </p>
