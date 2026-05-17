@@ -1,0 +1,20 @@
+{
+  "name": "lavvy",
+  "version": "1.0.0",
+  "description": "A minimalist Lavalink v4 client for Node.js",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": ["src", "index.js"],
+  "keywords": ["lavalink", "discord", "music", "audio", "lavvy"],
+  "author": "team-lavvy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/team-lavvy/Lavvy"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
